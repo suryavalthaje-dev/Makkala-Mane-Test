@@ -1,1 +1,0 @@
-The four program card images are cropped directly from the user-supplied Programs(1).png sample layout, so the program cards use the same illustrative sample pictures requested by the user.
