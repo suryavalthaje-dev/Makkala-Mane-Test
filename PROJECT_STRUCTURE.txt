@@ -1,0 +1,27 @@
+Makkala Mane V4.9 — Restructured Baseline
+
+Repository structure
+--------------------
+index.html                 Home page (root)
+
+pages/
+  about.html
+  programs.html
+  activities.html
+  feedback.html
+  team.html
+  gallery.html
+  contact.html
+
+assets/
+  css/
+    style.css
+  js/
+    script.js
+  images/
+    (all existing V4.9 image assets)
+
+CNAME remains at repository root for GitHub Pages/custom-domain support.
+
+All internal HTML paths have been updated for the new structure.
+No V4.9 content or design was intentionally changed.
