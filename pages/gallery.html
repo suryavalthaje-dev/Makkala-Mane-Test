@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Explore photographs from Makkala Mane Preschool and Daycare activities, celebrations and everyday learning."><meta name="theme-color" content="#123c7a"><title>Gallery | Makkala Mane Preschool</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css"><style id="gallery-title-only">
+.gallery-title-only{
+  display:block !important;
+  min-height:0 !important;
+  padding:10px 12px 12px !important;
+}
+.gallery-title-only span{
+  display:block !important;
+  font-family:inherit !important;
+  font-size:14px !important;
+  line-height:1.35 !important;
+  font-weight:700 !important;
+}
+.gallery-page-item > div strong,
+.gallery-page-item > div > span:not(.gallery-title-only span){
+  display:none !important;
+}
+</style><style id="gallery-match-activities">
+/* Gallery cards intentionally match Activities & Events cards. */
+.gallery-page-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:12px !important;
+}
+.gallery-page-item{
+  border-radius:16px !important;
+  overflow:hidden !important;
+}
+.gallery-page-item img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  aspect-ratio:4/3 !important;
+  object-fit:cover !important;
+}
+.gallery-page-item .gallery-title-only{
+  display:block !important;
+  min-height:0 !important;
+  padding:9px 12px 10px !important;
+}
+.gallery-page-item .gallery-title-only span{
+  display:block !important;
+  margin:0 !important;
+  font-family:"Nunito",sans-serif !important;
+  font-size:.76rem !important;
+  font-weight:800 !important;
+  color:#243f70 !important;
+  line-height:1.35 !important;
+  text-align:center !important;
+}
+@media(max-width:850px){
+  .gallery-page-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+@media(max-width:560px){
+  .gallery-page-grid{grid-template-columns:1fr !important;}
+}
+</style></head><body id="top"><header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="../index.html" aria-label="Makkala Mane home"><img class="site-logo" data-mm-photo="logo" src="../assets/images/makkala-mane-logo.png" alt="Makkala Mane Preschool & Day Care Centre - ಮಕ್ಕಳ ಮನೆ"></a>
+<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav class="main-nav" aria-label="Main navigation">
+<a class="" href="../index.html">Home</a><a class="" href="about.html">About Us</a><a class="" href="programs.html">Programs</a><a class="" href="team.html">Our Team</a><a class="active-page" href="gallery.html">Gallery</a><a class="" href="activities.html">Activities & Events</a><a class="" href="feedback.html">Parents' Feedback</a><a class="" href="contact.html">Contact Us</a>
+<a href="../admin">Admin</a>
+</nav><a class="nav-cta" href="https://wa.me/919686940988?text=Hello%20Makkala%20Mane,%20I%20would%20like%20to%20know%20more%20about%20admission." target="_blank" rel="noopener">WhatsApp</a></div></header><main><section class="page-hero"><div class="container"><span class="kicker">OUR GALLERY</span><h1>Moments made for little memories.</h1><p>A glimpse into the joyful activities, celebrations and experiences of children at Makkala Mane.</p></div></section><section class="section gallery"><div class="container"><div id="dynamicGalleryGrid" class="gallery-page-grid"></div><p class="image-credit">Gallery photographs are from Makkala Mane's own photo collection.</p></div></section></main><div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true"><button class="lightbox-close" type="button" aria-label="Close">×</button><figure><img id="lightbox-image" src="" alt=""><figcaption id="lightbox-caption"></figcaption></figure></div><footer class="footer"><div class="container footer-grid"><div class="brand footer-brand"><img class="site-logo footer-logo" data-mm-photo="logo" src="../assets/images/makkala-mane-logo.png" alt="Makkala Mane Preschool & Day Care Centre - ಮಕ್ಕಳ ಮನೆ"></div><p>© <span id="year"></span> Makkala Mane. All rights reserved.</p><a href="#top">Back to top ↑</a></div></footer><script src="../assets/js/script.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="../assets/js/supabase-client.js"></script><script id="gallery-data-loader">
+document.addEventListener("DOMContentLoaded",async function(){
+  try{
+    const {data,error}=await window.mmSupabase.from('gallery_photos').select('*').order('display_order',{ascending:true});
+    if(error)throw error;
+    const grid=document.getElementById('dynamicGalleryGrid'); if(!grid)return; grid.innerHTML='';
+    (data||[]).forEach(function(x){
+      if(!x.storage_path)return; const url=window.mmPublicUrl(x.storage_path); const btn=document.createElement('button');btn.className='gallery-page-item';btn.type='button';btn.dataset.full=url;btn.dataset.caption=x.title||'';
+      btn.innerHTML='<img src="'+url+'?v='+encodeURIComponent(x.storage_path)+'" alt="'+String(x.title||'Gallery photo').replace(/"/g,'&quot;')+'"><div class="gallery-title-only"><span>'+String(x.title||'').replace(/</g,'&lt;')+'</span></div>';grid.appendChild(btn);
+    });
+    grid.querySelectorAll('.gallery-page-item').forEach(function(btn){btn.addEventListener('click',function(){const lb=document.getElementById('lightbox'),im=document.getElementById('lightbox-image'),cap=document.getElementById('lightbox-caption');if(lb&&im){im.src=btn.dataset.full;im.alt=btn.dataset.caption||'';if(cap)cap.textContent=btn.dataset.caption||'';lb.classList.add('open');lb.setAttribute('aria-hidden','false');}});});
+  }catch(e){console.warn('Gallery content could not be loaded:',e.message||e)}
+});
+</script></body></html>

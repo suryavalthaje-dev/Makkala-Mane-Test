@@ -1,0 +1,141 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Makkala Mane – Admin</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css"><style>
+.admin-page{max-width:1150px;margin:auto;padding:40px 20px 70px;font-family:Nunito,sans-serif;color:#153b72}.admin-card{background:#fff;border:1px solid #dce5e6;border-radius:18px;padding:25px;box-shadow:0 8px 28px rgba(0,0,0,.06);margin-bottom:20px}.hidden{display:none!important}.admin-login{max-width:450px;margin:45px auto}.admin-tabs{display:flex;gap:5px;flex-wrap:wrap;border-bottom:2px solid #dce6e8;margin:18px 0 24px}.admin-tab{border:1px solid #d2dee2;border-bottom:0;background:#e9f0f2;color:#496675;padding:12px 18px;border-radius:12px 12px 0 0;font:700 14px Nunito;cursor:pointer}.admin-tab.active{background:#123c7a;color:#fff}.admin-panel{display:none}.admin-panel.active{display:block}.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.admin-form label{display:block;font-weight:700;font-size:.9rem;margin:13px 0 6px}.admin-form input,.admin-form textarea,.admin-form select{width:100%;box-sizing:border-box;padding:11px 12px;border:1px solid #ccd9dc;border-radius:9px;font:inherit}.admin-form textarea{min-height:110px}.admin-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.admin-btn{border:0;border-radius:9px;padding:10px 15px;font:700 14px Nunito;cursor:pointer}.admin-primary{background:#123c7a;color:#fff}.admin-secondary{background:#edf3f4;color:#24434a}.admin-danger{background:#f8e9e9;color:#9a3030}.admin-note{margin-top:12px;padding:10px 12px;border-radius:9px;background:#eef7ef;color:#276333}.admin-note.error{background:#fbecec;color:#9a3030}.admin-toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px}.admin-section{margin-top:24px;border:1px solid #dce6e8;border-radius:14px;overflow:hidden}.admin-section-head{padding:15px 18px;background:#f1f6f7;border-bottom:1px solid #dce6e8}.admin-section-head h3{margin:0}.admin-section-head p{margin:3px 0 0;opacity:.7;font-size:.85rem}.admin-item{display:grid;grid-template-columns:100px 1fr auto;gap:14px;align-items:start;border-top:1px solid #e1e8e9;padding:16px 18px}.admin-item:first-child{border-top:0}.admin-thumb{width:100px;height:70px;object-fit:cover;border-radius:10px;border:1px solid #d5dfe1}.admin-title{font-weight:800}.admin-meta{font-size:.84rem;opacity:.7;margin-top:4px}.admin-edit{grid-column:1/-1;background:#f7fafb;border:1px solid #dce6e8;border-radius:12px;padding:15px}.admin-empty{padding:18px;color:#667}.feedback-preview{font-size:.92rem;line-height:1.5;margin-top:8px}@media(max-width:750px){.admin-grid{grid-template-columns:1fr}.admin-item{grid-template-columns:75px 1fr}.admin-item-actions{grid-column:2}.admin-thumb{width:75px;height:58px}.admin-tabs{overflow-x:auto;flex-wrap:nowrap}.admin-tab{white-space:nowrap}}
+</style><style>
+.admin-page{max-width:1280px!important;padding:12px!important;font-size:12px!important}
+.admin-page h1{font-size:1.4rem!important;margin:0!important}.admin-page h2{font-size:1rem!important;margin:0 0 3px!important}.admin-page p{font-size:11px!important;margin:1px 0 4px!important}
+.admin-card{padding:9px!important;border-radius:9px!important;margin-bottom:7px!important}.admin-grid{gap:8px!important}.admin-tabs{gap:2px!important;margin:6px 0 9px!important}.admin-tab{padding:6px 9px!important;font-size:11px!important}
+.admin-form label{font-size:11px!important;margin:5px 0 2px!important}.admin-form input,.admin-form textarea,.admin-form select{padding:5px 7px!important;font-size:11px!important}.admin-form textarea{min-height:55px!important}
+.admin-actions{gap:4px!important;margin-top:5px!important}.admin-btn{padding:5px 8px!important;font-size:10px!important}.admin-note{padding:6px 8px!important;margin-top:6px!important}
+.admin-section{margin-top:7px!important;border-radius:7px!important}.admin-section-head{padding:6px 8px!important}.admin-section-head h3{font-size:.85rem!important}.admin-section-head p{font-size:9px!important}
+.admin-item{grid-template-columns:55px 1fr auto!important;gap:6px!important;padding:6px 8px!important}.admin-thumb{width:55px!important;height:39px!important}.admin-title{font-size:11px!important}.admin-meta{font-size:9px!important}.admin-empty{padding:6px!important;font-size:10px!important}.feedback-preview{font-size:10px!important;line-height:1.2!important}.admin-edit{padding:7px!important}
+</style><style id="admin-nav-font-fix">
+.site-header,.site-header *,.main-nav,.main-nav a,.nav-cta,.brand{font-family:"Nunito",sans-serif!important}
+.site-header .main-nav a{font-size:inherit!important}
+.site-header .nav-cta{font-size:inherit!important}
+</style><style id="admin-compact">
+.admin-page{padding:10px 12px 22px!important;font-size:12px!important}
+.admin-page h1{font-size:1.3rem!important;margin:0 0 2px!important}.admin-page h2{font-size:.98rem!important;margin:0 0 3px!important}.admin-page p{font-size:11px!important;margin:1px 0 3px!important}
+.admin-card{padding:8px!important;margin-bottom:6px!important}.admin-tabs{margin:5px 0 8px!important}.admin-tab{padding:6px 9px!important;font-size:11px!important}
+.admin-form label{font-size:11px!important;margin:5px 0 2px!important}.admin-form input,.admin-form textarea,.admin-form select{padding:5px 7px!important;font-size:11px!important}.admin-form textarea{min-height:55px!important}
+.admin-actions{gap:4px!important;margin-top:5px!important}.admin-btn{padding:5px 8px!important;font-size:10px!important}
+.admin-section{margin-top:6px!important}.admin-section-head{padding:6px 8px!important}.admin-section-head h3{font-size:.84rem!important}.admin-section-head p{font-size:9px!important}
+.admin-item{grid-template-columns:55px 1fr auto!important;gap:6px!important;padding:6px 8px!important}.admin-thumb{width:55px!important;height:39px!important}.admin-title{font-size:11px!important}.admin-meta{font-size:9px!important}.admin-empty{padding:6px!important;font-size:10px!important}
+.feedback-preview{font-size:11px!important;line-height:1.35!important;white-space:normal!important;overflow:visible!important;display:block!important;max-height:none!important;-webkit-line-clamp:unset!important}
+.admin-edit{padding:7px!important}.admin-edit textarea{min-height:150px!important;line-height:1.4!important}
+</style><style>
+.feedback-preview{font-size:11px!important;line-height:1.4!important;white-space:normal!important;overflow:visible!important;max-height:none!important;display:block!important}
+.admin-edit textarea{min-height:150px!important;line-height:1.4!important}
+</style><style id="team-photo-admin-style">
+.team-photo-admin-card{display:flex;flex-direction:column;gap:10px}
+.team-photo-admin-preview{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:320px;
+  object-fit:contain;
+  border-radius:14px;
+  background:#f4f7f8;
+}
+.team-photo-admin-card h3{margin:0;color:#123c7a;font:800 1.15rem "Baloo 2",sans-serif}
+</style><style id="website-photo-admin-style">
+.website-photo-admin-card{display:flex;flex-direction:column;gap:10px}
+.website-photo-admin-preview{display:block;width:100%;height:auto;max-height:300px;object-fit:contain;border-radius:14px;background:#f4f7f8}
+.website-photo-admin-preview.logo-preview{max-height:180px}
+.website-photo-admin-card h3{margin:0;color:#123c7a;font:800 1.15rem "Baloo 2",sans-serif}
+</style></head><body>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html"><img class="site-logo" src="../assets/images/makkala-mane-logo.png" data-mm-photo="logo" alt="Makkala Mane"></a><button class="menu-toggle" aria-label="Open menu">☰</button><nav class="main-nav"><a href="../index.html">Home</a><a href="../pages/about.html">About Us</a><a href="../pages/programs.html">Programs</a><a href="../pages/team.html">Our Team</a><a href="../pages/gallery.html">Gallery</a><a href="../pages/activities.html">Activities &amp; Events</a><a href="../pages/feedback.html">Parents' Feedback</a><a href="../pages/contact.html">Contact Us</a><a class="active-page" href="./">Admin</a></nav><a class="nav-cta" href="https://wa.me/919686940988" target="_blank" rel="noopener">WhatsApp</a></div></header>
+<main class="admin-page"><section id="loginView" class="admin-card admin-login"><h1>Admin Login</h1><p>Manage Makkala Mane website content.</p><form id="loginForm" class="admin-form"><label>Email address<input id="email" type="email" autocomplete="username" required></label><label>Password<input id="password" type="password" required></label><div class="admin-actions"><button class="admin-btn admin-primary">Login</button></div><div id="loginMsg" class="admin-note error hidden"></div></form></section>
+<section id="dashboard" class="hidden"><div class="admin-toolbar"><div><h1>Admin</h1><p>Manage website content from one place.</p></div><button id="logout" class="admin-btn admin-secondary">Sign Out</button></div><div class="admin-tabs"><button class="admin-tab active" data-panel="activities">Manage Activities &amp; Events</button><button class="admin-tab" data-panel="gallery">Manage Gallery</button><button class="admin-tab" data-panel="feedback">Manage Parents' Feedback</button><button class="admin-tab" data-panel="teamPhotos">Manage Principal &amp; Staff Photos</button><button class="admin-tab" data-panel="websitePhotos">Manage Website Photos</button></div>
+<section id="activities" class="admin-panel active"><div class="admin-grid"><section class="admin-card"><h2>Add Photo</h2><form id="photoForm" class="admin-form"><label>Tab / Section<select id="photoTab"><option value="celebrations">Celebrations</option><option value="fun-learning">Fun &amp; Learning</option><option value="birthdays">Birthdays</option><option value="little-performers">Little Performers</option></select></label><label>Title<input id="photoTitle" required></label><label>Choose Photo<input id="photoFile" type="file" accept="image/*" required></label>
+<label>Display Order<select id="photoOrderMode"><option value="first">First</option><option value="last" selected>Last</option><option value="after">After Specific Existing Title</option></select></label>
+<label id="photoAfterWrap" class="hidden">After<select id="photoAfter"></select></label>
+<div class="admin-actions"><button class="admin-btn admin-primary">Publish Photo</button></div><div id="photoMsg" class="admin-note hidden"></div></form></section><section class="admin-card"><h2>Add YouTube Video</h2><form id="videoForm" class="admin-form"><label>Tab / Section<select id="videoTab"><option value="videos">Videos</option><option value="celebrations">Celebrations</option><option value="fun-learning">Fun &amp; Learning</option><option value="birthdays">Birthdays</option><option value="little-performers">Little Performers</option></select></label><label>Title<input id="videoTitle" required></label><label>YouTube URL<input id="videoUrl" type="url" required></label>
+<label>Display Order<select id="videoOrderMode"><option value="first">First</option><option value="last" selected>Last</option><option value="after">After Specific Existing Title</option></select></label>
+<label id="videoAfterWrap" class="hidden">After<select id="videoAfter"></select></label>
+<div class="admin-actions"><button class="admin-btn admin-primary">Publish Video</button></div><div id="videoMsg" class="admin-note hidden"></div></form></section></div><section class="admin-card"><div class="admin-toolbar"><div><h2>Published Content</h2><p>Grouped by Activities &amp; Events tab.</p></div><button id="refreshA" class="admin-btn admin-secondary">Refresh</button></div><div id="activityList"></div></section></section>
+<section id="gallery" class="admin-panel"><section class="admin-card"><h2>Add Gallery Photo</h2><form id="galleryForm" class="admin-form"><label>Title<input id="galleryTitle" required></label><label>Choose Photo<input id="galleryFile" type="file" accept="image/*" required></label>
+<label>Display Order<select id="galleryOrderMode"><option value="first">First</option><option value="last" selected>Last</option><option value="after">After Specific Existing Title</option></select></label>
+<label id="galleryAfterWrap" class="hidden">After<select id="galleryAfter"></select></label>
+<div class="admin-actions"><button class="admin-btn admin-primary">Publish Gallery Photo</button></div><div id="galleryMsg" class="admin-note hidden"></div></form></section><section class="admin-card"><div class="admin-toolbar"><div><h2>Published Gallery Photos</h2><p>All existing and Admin-added Gallery photos.</p></div><button id="refreshG" class="admin-btn admin-secondary">Refresh</button></div><div id="galleryList"></div></section></section>
+<section id="feedback" class="admin-panel"><div class="admin-grid"><section class="admin-card"><h2>Add Text Review</h2><form id="feedbackForm" class="admin-form"><label>Parent / Name<input id="feedbackName" required maxlength="100"></label><label>Review<textarea id="feedbackText" required maxlength="3000"></textarea></label>
+<label>Display Order<select id="feedbackOrderMode"><option value="first">First</option><option value="last" selected>Last</option><option value="after">After Specific Existing Title</option></select></label>
+<label id="feedbackAfterWrap" class="hidden">After<select id="feedbackAfter"></select></label>
+<div class="admin-actions"><button class="admin-btn admin-primary">Publish Text Review</button></div><div id="feedbackMsg" class="admin-note hidden"></div></form></section><section class="admin-card"><h2>Add Parent Story Video</h2><form id="feedbackVideoForm" class="admin-form"><label>Video Title<input id="feedbackVideoTitle" required maxlength="150"></label><label>YouTube URL<input id="feedbackVideoUrl" type="url" required placeholder="https://www.youtube.com/watch?v=..."></label>
+<label>Display Order<select id="feedbackVideoOrderMode"><option value="first">First</option><option value="last" selected>Last</option><option value="after">After Specific Existing Title</option></select></label>
+<label id="feedbackVideoAfterWrap" class="hidden">After<select id="feedbackVideoAfter"></select></label>
+<div class="admin-actions"><button class="admin-btn admin-primary">Publish Parent Story Video</button></div><div id="feedbackVideoMsg" class="admin-note hidden"></div></form></section></div><section class="admin-card"><div class="admin-toolbar"><div><h2>Published Text Reviews</h2><p>All existing and Admin-added parent reviews.</p></div><button id="refreshF" class="admin-btn admin-secondary">Refresh</button></div><div id="feedbackList"></div></section><section class="admin-card"><div class="admin-toolbar"><div><h2>Published Parent Story Videos</h2><p>All existing and Admin-added parent story videos.</p></div></div><div id="feedbackVideoList"></div></section></section><section id="teamPhotos" class="admin-panel">
+  <section class="admin-card">
+    <h2>Manage Principal &amp; Staff Photos</h2>
+    <p class="admin-note">These are the two permanent website photos. Uploading a replacement overwrites the current static photo. No title or other details can be changed.</p>
+    <div class="admin-grid">
+      <section class="admin-card team-photo-admin-card">
+        <h3>Principal Photo</h3>
+        <img class="team-photo-admin-preview" id="principalPhotoPreview" src="../assets/images/principal-actual.png" data-mm-photo="principal" alt="Current Principal photo">
+        <form id="principalPhotoForm" class="admin-form">
+          <label>Replace Photo<input id="principalPhotoFile" type="file" accept="image/*" required></label>
+          <div class="admin-actions"><button class="admin-btn admin-primary">Change Principal Photo</button></div>
+          <div id="principalPhotoMsg" class="admin-note hidden"></div>
+        </form>
+      </section>
+      <section class="admin-card team-photo-admin-card">
+        <h3>Staff Photo</h3>
+        <img class="team-photo-admin-preview" id="staffPhotoPreview" src="../assets/images/staff-actual.png" data-mm-photo="staff" alt="Current Staff photo">
+        <form id="staffPhotoForm" class="admin-form">
+          <label>Replace Photo<input id="staffPhotoFile" type="file" accept="image/*" required></label>
+          <div class="admin-actions"><button class="admin-btn admin-primary">Change Staff Photo</button></div>
+          <div id="staffPhotoMsg" class="admin-note hidden"></div>
+        </form>
+      </section>
+    </div>
+  </section>
+</section><section id="websitePhotos" class="admin-panel">
+  <section class="admin-card">
+    <h2>Manage Website Photos</h2>
+    <p class="admin-note">These website images are stored in Supabase. Changing a photo replaces the current website image; no JSON record or photo history is created.</p>
+    <div class="admin-grid">
+      <section class="admin-card website-photo-admin-card">
+        <h3>Website Logo</h3>
+        <img class="website-photo-admin-preview logo-preview" id="websiteLogoPreview" src="../assets/images/makkala-mane-logo.png" alt="Current website logo">
+        <form id="websiteLogoForm" class="admin-form">
+          <label>Replace Logo<input id="websiteLogoFile" type="file" accept="image/*" required></label>
+          <div class="admin-actions"><button class="admin-btn admin-primary">Change Logo</button></div>
+          <div id="websiteLogoMsg" class="admin-note hidden"></div>
+        </form>
+      </section>
+      <section class="admin-card website-photo-admin-card">
+        <h3>Home Page Photo</h3>
+        <img class="website-photo-admin-preview" id="homePhotoPreview" src="../assets/images/home-children.jpg" data-mm-photo="home" alt="Current Home Page photo">
+        <form id="homePhotoForm" class="admin-form">
+          <label>Replace Photo<input id="homePhotoFile" type="file" accept="image/*" required></label>
+          <div class="admin-actions"><button class="admin-btn admin-primary">Change Home Page Photo</button></div>
+          <div id="homePhotoMsg" class="admin-note hidden"></div>
+        </form>
+      </section>
+      <section class="admin-card website-photo-admin-card">
+        <h3>About Us Photo</h3>
+        <img class="website-photo-admin-preview" id="aboutPhotoPreview" src="../assets/images/about-makkala-mane.jpg" data-mm-photo="about" alt="Current About Us photo">
+        <form id="aboutPhotoForm" class="admin-form">
+          <label>Replace Photo<input id="aboutPhotoFile" type="file" accept="image/*" required></label>
+          <div class="admin-actions"><button class="admin-btn admin-primary">Change About Us Photo</button></div>
+          <div id="aboutPhotoMsg" class="admin-note hidden"></div>
+        </form>
+      </section>
+      <section class="admin-card website-photo-admin-card">
+        <h3>Latest Updates</h3>
+        <p>Upload the current program invitation, announcement or latest update shown on the Home page.</p>
+        <img class="website-photo-admin-preview latest-update-admin-preview" id="latestUpdatePreview" src="../assets/images/latest-update-invitation.png" data-mm-photo="latest_update" alt="Current Latest Updates image">
+        <form id="latestUpdateForm" class="admin-form">
+          <label>Replace Latest Updates Image<input id="latestUpdateFile" type="file" accept="image/*" required></label>
+          <div class="admin-actions"><button class="admin-btn admin-primary">Change Latest Updates</button></div>
+          <div id="latestUpdateMsg" class="admin-note hidden"></div>
+        </form>
+      </section>
+    </div>
+  </section>
+</section>
+
+</section></section></main>
+<script src="../assets/js/script.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="../assets/js/supabase-client.js"></script><script src="../admin_supabase.js"></script></body></html>

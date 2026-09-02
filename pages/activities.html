@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="See celebrations, festivals, educational activities, outings and YouTube videos from Makkala Mane Preschool in Puttur.">
+<meta name="theme-color" content="#123c7a">
+<title>Activities & Events | Makkala Mane Preschool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.activities-section{padding-top:22px!important;padding-bottom:22px!important}.activity-group{margin-bottom:24px}.activity-group:last-child{margin-bottom:0}.activity-group-heading{margin-bottom:10px}.activity-group-heading .section-kicker{font-size:.72rem;letter-spacing:.14em;font-weight:800;color:#657b22}.activity-group-heading h2{font-size:clamp(1.25rem,2.3vw,1.55rem);line-height:1.12;margin:3px 0 0;color:#123c7a}.activities-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:0}.activity-tile{overflow:hidden;border-radius:16px;background:#fff;box-shadow:0 10px 24px rgba(40,60,80,.08)}.activity-image-button{display:block;position:relative;width:100%;aspect-ratio:4/3;padding:0;border:0;background:#eee;cursor:zoom-in;overflow:hidden;border-radius:16px 16px 0 0}.activity-image-button img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .3s ease}.activity-image-button:hover img{transform:scale(1.035)}.activity-title{display:block;padding:9px 12px 10px;color:#123c7a;font-family:"Baloo 2",sans-serif;font-size:.98rem;font-weight:800;line-height:1.08;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.youtube-section{margin-top:3px!important;padding-top:21px!important;padding-bottom:22px!important}.youtube-intro{margin-bottom:9px!important}.youtube-intro .section-heading{margin-bottom:4px!important}.section-heading h2{font-size:clamp(1.45rem,2.7vw,1.9rem)!important;line-height:1.08!important;margin-top:4px!important;margin-bottom:5px!important}.section-heading p{color:#405a78!important;font-size:.92rem!important;line-height:1.42!important}.youtube-actions{margin-top:7px!important}.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:11px}.video-card{overflow:hidden;border-radius:16px;background:#fff;box-shadow:0 10px 24px rgba(40,60,80,.08)}.video-wrap{position:relative;overflow:hidden;aspect-ratio:16/9;background:#111}.youtube-thumb{position:relative;display:block;width:100%;height:100%;padding:0;border:0;cursor:pointer;background:#111;overflow:hidden}.youtube-thumb img{display:block;width:100%;height:100%;object-fit:cover}.video-title-overlay{display:none}.video-card:after{content:""}.video-title-below{display:block;padding:9px 13px 10px;color:#123c7a;text-align:center;font-family:"Baloo 2",sans-serif;font-size:.98rem;font-weight:800;line-height:1.08;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.video-play{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);width:51px;height:37px;border-radius:11px;display:grid;place-items:center;background:#ff0000;color:#fff;font-size:19px;padding-left:3px;box-shadow:0 5px 16px rgba(0,0,0,.25);pointer-events:none}.video-wrap iframe{display:block;width:100%;height:100%;border:0}.image-lightbox{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(0,0,0,.88)}.image-lightbox.is-open{display:flex}.image-lightbox img{display:block;width:auto;height:auto;max-width:96vw;max-height:92vh;object-fit:contain;border-radius:8px;box-shadow:0 12px 45px rgba(0,0,0,.45)}.image-lightbox-close{position:fixed;top:18px;right:22px;z-index:10000;width:46px;height:46px;border:0;border-radius:50%;background:rgba(255,255,255,.95);color:#123c7a;font-size:30px;line-height:1;cursor:pointer;box-shadow:0 5px 18px rgba(0,0,0,.25)}@media(max-width:850px){.activities-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.video-grid{grid-template-columns:1fr}}@media(max-width:560px){.activities-grid{grid-template-columns:1fr}.activity-tile{height:auto}.activity-group{margin-bottom:20px}.image-lightbox{padding:12px}.image-lightbox img{max-width:98vw;max-height:88vh}.image-lightbox-close{top:10px;right:10px}}
+
+/* V4.1 refinement: grouped Activities & Events section headings */
+.activity-group-heading {
+  font-family: "Baloo 2", sans-serif;
+  font-size: clamp(1.18rem, 2.2vw, 1.42rem) !important;
+  line-height: 1.1 !important;
+  margin: 0 0 10px !important;
+  font-weight: 800 !important;
+}
+.activity-group-heading .group-subtitle {
+  font-size: 1em !important;
+  font-weight: 700 !important;
+}
+@media (max-width: 560px) {
+  .activity-group-heading {
+    font-size: 1.2rem !important;
+    margin-bottom: 8px !important;
+  }
+}
+
+</style>
+
+<style id="activities-tabs-trial">
+.activities-tabs-container{
+  padding:0;
+}
+.activities-tabs{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-end;
+  justify-content:flex-start;
+  gap:3px;
+  margin:20px 0 0;
+  padding:0;
+  border-bottom:2px solid #d6e1e5;
+}
+.activities-tab{
+  position:relative;
+  border:1px solid #d2dee2;
+  border-bottom:none;
+  background:#e9f0f2;
+  color:#496675;
+  border-radius:12px 12px 0 0;
+  padding:11px 19px 10px;
+  margin-bottom:-2px;
+  font:700 .88rem "Nunito",sans-serif;
+  cursor:pointer;
+  transition:.2s ease;
+}
+.activities-tab:hover{
+  background:#f3f7f8;
+  color:#315b70;
+}
+.activities-tab.active{
+  background:#fff;
+  color:#2f7780;
+  border-color:#d2dee2;
+  border-bottom:2px solid #fff;
+  box-shadow:0 -2px 8px rgba(45,88,102,.06);
+}
+.activities-tabs + .section.activities-section{
+  margin-top:0 !important;
+}
+.activities-tab-panel{
+  display:none;
+}
+.activities-tab-panel.active{
+  display:block;
+}
+.activity-group.activities-tab-panel{
+  display:none;
+}
+.activity-group.activities-tab-panel.active{
+  display:block;
+}
+.youtube-section.activities-tab-panel{
+  display:none;
+}
+.youtube-section.activities-tab-panel.active{
+  display:block;
+}
+@media(max-width:700px){
+  .activities-tabs{
+    gap:2px;
+    padding:0;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+  }
+  .activities-tab{
+    flex:0 0 auto;
+    padding:9px 13px 8px;
+    font-size:.76rem;
+  }
+}
+</style>
+
+
+<style id="activities-title-style-trial">
+.activities-section .activity-title,
+.activities-section .youtube-video-title{
+  font-family:"Nunito", sans-serif !important;
+  font-size:.76rem !important;
+  font-weight:800 !important;
+  color:#243f70 !important;
+  line-height:1.35 !important;
+}
+
+.activities-section .video-title-below,
+.youtube-section .video-title-below{
+  font-family:"Nunito", sans-serif !important;
+  font-size:.76rem !important;
+  font-weight:800 !important;
+  color:#243f70 !important;
+  line-height:1.35 !important;
+  padding:11px 7px 7px !important;
+  text-align:center !important;
+}
+</style>
+
+</head>
+<body id="top">
+<header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="../index.html" aria-label="Makkala Mane home"><img class="site-logo" data-mm-photo="logo" src="../assets/images/makkala-mane-logo.png" alt="Makkala Mane Preschool & Day Care Centre - ಮಕ್ಕಳ ಮನೆ"></a>
+<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="about.html">About Us</a><a href="programs.html">Programs</a><a href="team.html">Our Team</a><a href="gallery.html">Gallery</a><a class="active-page" href="activities.html">Activities & Events</a><a href="feedback.html">Parents' Feedback</a><a href="contact.html">Contact Us</a>
+<a href="../admin">Admin</a></nav>
+<a class="nav-cta" href="https://wa.me/919686940988?text=Hello%20Makkala%20Mane,%20I%20would%20like%20to%20know%20more%20about%20admission." target="_blank" rel="noopener">WhatsApp</a>
+</div></header>
+<main>
+<section class="page-hero"><div class="container"><span class="kicker">ACTIVITIES & EVENTS</span><h1>Learning, celebrating and growing together.</h1><p>From festivals and special celebrations to classroom activities and outings, every experience adds a little joy to childhood.</p></div></section>
+
+
+<div class="container activities-tabs-container">
+<div class="activities-tabs" role="tablist" aria-label="Activities and Events categories">
+  <button class="activities-tab active" type="button" role="tab" aria-selected="true" data-tab="celebrations">Celebrations</button>
+  <button class="activities-tab" type="button" role="tab" aria-selected="false" data-tab="fun-learning">Fun &amp; Learning</button>
+  <button class="activities-tab" type="button" role="tab" aria-selected="false" data-tab="birthdays">Birthdays</button>
+  <button class="activities-tab" type="button" role="tab" aria-selected="false" data-tab="little-performers">Little Performers</button>
+  <button class="activities-tab" type="button" role="tab" aria-selected="false" data-tab="videos">Videos</button>
+</div>
+</div>
+
+<section class="section activities-section">
+<div class="container">
+  <div class="activity-group" data-tab-key="celebrations">
+    <div class="activity-group-heading"><span class="section-kicker">CELEBRATIONS</span><h2>Celebrating special moments together.</h2></div>
+    <div class="activities-grid" data-items-for="celebrations"></div>
+  </div>
+  <div class="activity-group" data-tab-key="fun-learning">
+    <div class="activity-group-heading"><span class="section-kicker">FUN & LEARNING BEYOND CLASSROOM</span><h2>Exploring, playing and learning together.</h2></div>
+    <div class="activities-grid" data-items-for="fun-learning"></div>
+  </div>
+  <div class="activity-group" data-tab-key="birthdays">
+    <div class="activity-group-heading"><span class="section-kicker">BIRTHDAYS</span><h2>Making every child feel special.</h2></div>
+    <div class="activities-grid" data-items-for="birthdays"></div>
+  </div>
+  <div class="activity-group" data-tab-key="little-performers">
+    <div class="activity-group-heading"><span class="section-kicker">LITTLE PERFORMERS</span><h2>Little voices, big confidence.</h2></div>
+    <div class="activities-grid" data-items-for="little-performers"></div>
+  </div>
+</div>
+</section>
+
+<section class="section youtube-section">
+<div class="container">
+  <div class="youtube-intro"><div class="section-heading"><span class="eyebrow">WATCH OUR VIDEOS</span><h2>See Makkala Mane in action.</h2><p>Glimpses of celebrations, activities and special moments at Makkala Mane.</p></div><div class="youtube-actions"><a class="btn btn-white" href="https://www.youtube.com/@MakkalaManePreschool" target="_blank" rel="noopener">Visit Our YouTube Channel →</a></div></div>
+  <div class="video-grid" id="dynamicVideoGrid"></div>
+</div>
+</section>
+
+
+<script id="activities-supabase-loader">
+document.addEventListener('DOMContentLoaded',async function(){
+ try{
+  const {data,error}=await window.mmSupabase.from('activities').select('*').order('display_order',{ascending:true});if(error)throw error;
+  function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  function photo(item){const a=document.createElement('article');a.className='activity-tile';const url=window.mmPublicUrl(item.storage_path||item.image_path);a.innerHTML='<button class="activity-image-button" type="button"><img src="'+esc(url)+'" alt="'+esc(item.title)+'"></button><div class="activity-title">'+esc(item.title)+'</div>';a.querySelector('button').onclick=function(){const lb=document.getElementById('imageLightbox'),im=document.getElementById('imageLightboxImage');if(lb&&im){im.src=url;im.alt=item.title;lb.classList.add('is-open');document.body.style.overflow='hidden';}};return a;}
+  function video(item){const a=document.createElement('article');a.className='video-card';a.innerHTML='<div class="video-wrap"><button class="youtube-thumb" type="button" data-youtube-id="'+esc(item.youtube_id)+'" aria-label="Play '+esc(item.title)+'"><img src="https://i.ytimg.com/vi/'+encodeURIComponent(item.youtube_id)+'/hqdefault.jpg" alt="'+esc(item.title)+' video thumbnail"><span class="video-play" aria-hidden="true">▶</span></button></div><div class="video-title-below">'+esc(item.title)+'</div>';return a;}
+  document.querySelectorAll('[data-items-for]').forEach(g=>g.innerHTML='');
+  (data||[]).filter(x=>x.media_type==='photo').forEach(x=>{const g=document.querySelector('[data-items-for="'+CSS.escape(x.tab)+'"]');if(g)g.appendChild(photo(x));});
+  document.querySelectorAll('.activity-group[data-tab-key]').forEach(g=>{const grid=g.querySelector('[data-items-for]');g.style.display=grid&&grid.children.length?'':'none';});
+  const vg=document.getElementById('dynamicVideoGrid');if(vg){vg.innerHTML='';(data||[]).filter(x=>x.media_type==='video'&&x.tab==='videos').forEach(x=>vg.appendChild(video(x)));vg.querySelectorAll('.youtube-thumb').forEach(function(b){if(window.attachYouTubeButton)window.attachYouTubeButton(b);});}
+ }catch(e){console.warn('Activities content could not be loaded:',e.message||e)}
+});
+</script>
+<div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="Enlarged activity image"><button class="image-lightbox-close" type="button" id="imageLightboxClose" aria-label="Close enlarged image">&times;</button><img id="imageLightboxImage" src="" alt=""></div>
+</main>
+<footer class="footer"><div class="container footer-grid"><div class="brand footer-brand"><img class="site-logo footer-logo" data-mm-photo="logo" src="../assets/images/makkala-mane-logo.png" alt="Makkala Mane Preschool & Day Care Centre - ಮಕ್ಕಳ ಮನೆ"></div><p>© <span id="year"></span> Makkala Mane. All rights reserved.</p><a href="#top">Back to top ↑</a></div></footer>
+<script src="../assets/js/script.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="../assets/js/supabase-client.js"></script>
+
+<script>
+  (function () {
+    const lightbox = document.getElementById("imageLightbox");
+    const lightboxImage = document.getElementById("imageLightboxImage");
+    const closeButton = document.getElementById("imageLightboxClose");
+    const imageButtons = document.querySelectorAll(".activity-image-button");
+
+    if (!lightbox || !lightboxImage || !closeButton) return;
+
+    function openLightbox(src, alt) {
+      lightboxImage.src = src;
+      lightboxImage.alt = alt || "";
+      lightbox.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+      closeButton.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      document.body.style.overflow = "";
+      lightboxImage.src = "";
+    }
+
+    imageButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        openLightbox(
+          button.getAttribute("data-lightbox-src"),
+          button.getAttribute("data-lightbox-alt")
+        );
+      });
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+        closeLightbox();
+      }
+    });
+  })();
+</script>
+
+
+
+<script id="activities-tabs-trial-script-fixed">
+document.addEventListener("DOMContentLoaded", function(){
+  const tabBar = document.querySelector(".activities-tabs");
+  if (!tabBar) return;
+
+  const tabs = Array.from(tabBar.querySelectorAll(".activities-tab"));
+  const groups = Array.from(document.querySelectorAll(".activities-section .activity-group"));
+  const videoSection = document.querySelector(".youtube-section");
+
+  if (!tabs.length || !groups.length) return;
+
+  // Map the existing sections in their current order.
+  const sections = [
+    { key: "celebrations", element: groups[0] },
+    { key: "fun-learning", element: groups[1] },
+    { key: "birthdays", element: groups[2] },
+    { key: "little-performers", element: groups[3] }
+  ];
+
+  if (videoSection) {
+    sections.push({ key: "videos", element: videoSection });
+  }
+
+  function showTab(key) {
+    sections.forEach(function(section){
+      const visible = section.key === key;
+      section.element.classList.toggle("active", visible);
+      section.element.classList.add("activities-tab-panel");
+      section.element.setAttribute("aria-hidden", visible ? "false" : "true");
+    });
+
+    tabs.forEach(function(tab){
+      const selected = tab.getAttribute("data-tab") === key;
+      tab.classList.toggle("active", selected);
+      tab.setAttribute("aria-selected", selected ? "true" : "false");
+    });
+
+    // Keep the page positioned at the tab bar instead of jumping far down.
+    window.scrollTo({
+      top: Math.max(
+        0,
+        tabBar.getBoundingClientRect().top + window.scrollY - 90
+      ),
+      behavior: "smooth"
+    });
+  }
+
+  tabs.forEach(function(tab){
+    tab.addEventListener("click", function(){
+      showTab(tab.getAttribute("data-tab"));
+    });
+  });
+
+  // Start with the first tab only.
+  showTab("celebrations");
+});
+</script>
+
+
+</body></html>
